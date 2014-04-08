@@ -1,0 +1,95 @@
+@font-face{
+	font-family: Migmix;
+	src: url(../font/migmix-1p-regular.ttf) format('truetype');
+}
+@font-face{
+	font-family: Meiryo;
+	src: url(../font/meiryo.ttf) format('truetype');
+}
+body{
+	position: absolute;
+	margin-top: 0px;
+	left: 50%;
+	margin-left: -500px;
+	background: #F1F1F1;
+	font-family: Meiryo;
+}
+table{
+	background: #F8F8F8;
+	width: 1000px;
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: 25px;
+}
+td{
+	text-align: center;
+	padding: 5px;
+}
+td.col0{
+	width:10%
+}
+td.col1{
+	width:30%
+}
+td.col2{
+	width:20%
+}
+td.col3{
+	width:20%
+}
+td.col4{
+	width:20%
+}
+table#header{
+	z-index: 1;
+	position:fixed;
+	top:0px;
+	left: 50%;
+	margin-left: -500px;
+	height:50px;
+	background:#5858FA;
+	color:#F8F8F8;
+	border-radius: 3px 3px 0px 0px;
+}
+table#members{
+	margin-top: 50px;
+	color:#9A9A9A;
+	border-radius: 0px 0px 3px 3px;
+}
+/*RGB Gを8ずつ足していこう*/
+.pro_even{
+	background: #E0E0F8;
+}
+.m2_even{
+	background: #E0E9F8;
+}
+.m1_even{
+	background: #E0EFF8;
+}
+.b4_even{
+	background: #E0F8F8;
+}
+input{
+	display: none;
+}
+label{
+	display: inline-block;
+	position: relative;
+	width: 3em;
+	height: 1em;
+	cursor: pointer;
+	padding: 10px;
+	//background: #ffffff;
+}
+input[type="radio"]:checked + label:after {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	background: #81DAF5;
+}
