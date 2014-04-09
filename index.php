@@ -6,23 +6,27 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/index.css">
 	<script type="text/javascript" src="./js/ajax.js"></script>
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.gpfloat-1.0.min.js"></script>
 	<title>金井研出席管理</title>
 	</head>
 	<body>
-	<script>
-		var url = "./comet.php";
-		var xhr = XMLHttpRequestCreate();
-		listen(xhr, url);
-	</script>
-	<table id="header">
-		<tr>
-			<td class="col0">学年</td>
-			<td class="col1">名前</td>
-			<td class="col2">研究室</td>
-			<td class="col3">学内</td>
-			<td class="col4">帰宅</td>
-		</tr>
-	</table>
+		<script>
+			var url = "./comet.php";
+			var xhr = XMLHttpRequestCreate();
+			listen(xhr, url);
+		</script>
+		<div id="header">
+			<table >
+				<tr>
+					<td class="col0">学年</td>
+					<td class="col1">名前</td>
+					<td class="col2">研究室</td>
+					<td class="col3">学内</td>
+					<td class="col4">帰宅</td>
+				</tr>
+			</table>
+		</div>
 		<?php
 			include_once './class/XmlUtil.class.php';
 			include_once './class/HtmlUtil.class.php';
@@ -33,5 +37,8 @@
 			$members = $xmlUtil->getEachElement();
 			print($htmlUtil->makeTable($members));
 		?>
+		<script>
+			$('#header').gpFloatX();
+		</script>
 	</body>
 </html>
