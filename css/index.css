@@ -1,16 +1,11 @@
 @font-face{
-	font-family: Migmix;
-	src: url(../font/migmix-1p-regular.ttf) format('truetype');
-}
-@font-face{
 	font-family: Meiryo;
 	src: url(../font/meiryo.ttf) format('truetype');
 }
 body{
 	position: absolute;
 	margin-top: 0px;
-	left: 50%;
-	margin-left: -500px;
+	width: 100%;
 	background: #F1F1F1;
 	font-family: Meiryo;
 }
@@ -31,21 +26,16 @@ td.col0{
 td.col1{
 	width:30%
 }
-td.col2{
+td.col2, td.col3, td.col4{
 	width:20%
 }
-td.col3{
-	width:20%
-}
-td.col4{
-	width:20%
-}
-table#header{
+div#header{
 	z-index: 1;
 	position:fixed;
-	top:0px;
-	left: 50%;
-	margin-left: -500px;
+	width: 100%;
+}
+div#header table{
+	margin: 0 auto;
 	height:50px;
 	background:#5858FA;
 	color:#F8F8F8;
@@ -53,6 +43,8 @@ table#header{
 }
 table#members{
 	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	color:#9A9A9A;
 	border-radius: 0px 0px 3px 3px;
 }
