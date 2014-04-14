@@ -44,7 +44,7 @@
 		/*
 		*	members.xmlのElementを修正する。
 		*/
-		public function corrElement($id, $status){
+		public function changeStatus($id, $status){
 			if ($this->xml) {
 				$this->xml->member[intval($id)]->status = $status;
 				$this->xml->asXml($this->FILE_NAME);

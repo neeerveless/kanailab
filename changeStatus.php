@@ -6,7 +6,7 @@
 	$status = $_POST[$id];
 	
 	$xmlUtil = new XmlUtil(FILE_PATH);
-	$xmlUtil->corrElement($id, $status);
+	$xmlUtil->changeStatus($id, $status);
 	
 	header("Location:index.php");
 	exit();
